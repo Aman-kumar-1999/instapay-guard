@@ -1,2 +1,19 @@
+server:
+  port: 8031
+
 spring:
-  port: 8021
+  application:
+    name: payment-gateway-service
+  datasource:
+    url: jdbc:mysql://localhost:3306/instapay_db?useSSL=false&serverTimezone=UTC
+    username: root
+    password: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  kafka:
+    bootstrap-servers: localhost:9092
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
