@@ -22,6 +22,7 @@
     <modules>
         <module>payment-gateway-service</module>
         <module>fraud-analytics-service</module>
+        <module>ledger-notification-service</module>
         <!--        <module>fraud-analytics-service</module>-->
 <!--        <module>ledger-notification-service</module>-->
     </modules>
