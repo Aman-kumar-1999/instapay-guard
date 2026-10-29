@@ -1,6 +1,7 @@
 package org.instapay.service;
 
 import lombok.AllArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import org.instapay.config.KafkaTopicConfig;
 import org.instapay.dto.PaymentEvent;
 import org.instapay.entity.Transaction;
@@ -12,12 +13,11 @@ import org.springframework.stereotype.Service;
 import java.math.BigDecimal;
 
 @Service
+@RequiredArgsConstructor
 public class PaymentService {
 
-    @Autowired
-    private TransactionRepo transactionRepo;
-    @Autowired
-    private KafkaTemplate<String, PaymentEvent> kafkaTemplate;
+    private final TransactionRepo transactionRepo;
+    private final KafkaTemplate<String, PaymentEvent> kafkaTemplate;
 
 
     public Transaction transferPayment(String sender, String receiver, BigDecimal amount){
