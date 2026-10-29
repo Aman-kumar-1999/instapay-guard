@@ -1,4 +1,5 @@
 package org.instapay.entity;
+
 import jakarta.persistence.*;
 import lombok.*;
 import java.math.BigDecimal;
@@ -12,12 +13,13 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @Builder
 public class Transaction {
-    @Id @GeneratedValue(strategy = GenerationType.UUID)
+    @Id
+    @GeneratedValue(strategy = GenerationType.UUID)
     private String transactionId;
     private String senderAccount;
     private String receiverAccount;
     private BigDecimal amount;
-    private String status; // PENDING, APPROVED, REJECTED
+    private String status;
     private LocalDateTime timestamp;
 
     @PrePersist

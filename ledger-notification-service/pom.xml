@@ -11,6 +11,11 @@
 
     <artifactId>ledger-notification-service</artifactId>
     <name>ledger-notification-service</name>
+
+    <properties>
+        <sonar.moduleKey>instapay-guard:ledger-notification-service</sonar.moduleKey>
+    </properties>
+
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -28,5 +33,13 @@
             <optional>true</optional>
         </dependency>
     </dependencies>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.sonarsource.scanner.maven</groupId>
+                <artifactId>sonar-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>

@@ -11,6 +11,10 @@
     <artifactId>payment-gateway-service</artifactId>
     <name>payment-gateway-service</name>
 
+    <properties>
+        <sonar.moduleKey>instapay-guard:payment-gateway-service</sonar.moduleKey>
+    </properties>
+
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -40,4 +44,12 @@
             <version>2.5.0</version>
         </dependency>
     </dependencies>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.sonarsource.scanner.maven</groupId>
+                <artifactId>sonar-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
 </project>

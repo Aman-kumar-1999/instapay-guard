@@ -17,6 +17,11 @@
 
     <properties>
         <java.version>17</java.version>
+        <sonar.projectKey>instapay-guard</sonar.projectKey>
+        <sonar.projectName>InstaPay Guard Platform</sonar.projectName>
+        <sonar.host.url>http://localhost:9000</sonar.host.url>
+        <sonar.token>sqa_14cca85e321bfda48f8ee93c75c534443abc5bc0</sonar.token>
+        <sonar.java.compliance>17</sonar.java.compliance>
     </properties>
 
     <modules>
@@ -26,4 +31,15 @@
         <!--        <module>fraud-analytics-service</module>-->
 <!--        <module>ledger-notification-service</module>-->
     </modules>
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.sonarsource.scanner.maven</groupId>
+                    <artifactId>sonar-maven-plugin</artifactId>
+                    <version>3.10.0.2594</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
 </project>
