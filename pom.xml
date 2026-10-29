@@ -20,7 +20,6 @@
         <sonar.projectKey>instapay-guard</sonar.projectKey>
         <sonar.projectName>InstaPay Guard Platform</sonar.projectName>
         <sonar.host.url>http://localhost:9000</sonar.host.url>
-        <sonar.token>sqa_14cca85e321bfda48f8ee93c75c534443abc5bc0</sonar.token>
         <sonar.java.compliance>17</sonar.java.compliance>
     </properties>
 
@@ -28,8 +27,6 @@
         <module>payment-gateway-service</module>
         <module>fraud-analytics-service</module>
         <module>ledger-notification-service</module>
-        <!--        <module>fraud-analytics-service</module>-->
-<!--        <module>ledger-notification-service</module>-->
     </modules>
     <build>
         <pluginManagement>
